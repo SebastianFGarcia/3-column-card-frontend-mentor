@@ -1,0 +1,87 @@
+$Bright-orange: hsl(31, 77%, 52%)
+$Dark-cyan: hsl(184, 100%, 22%)
+$Very-dark-cyan: hsl(179, 100%, 13%)
+$Transparent-white: hsla(0, 0%, 100%, 0.75) //(paragraphs)
+$Very-light-gray: hsl(0, 0%, 95%) //(background, headings, buttons)
+
+$Mobile: 375px
+$Desktop: 1044px
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap')
+
+$Lexen: 'Lexend Deca', sans-serif
+$big: 'Big Shoulders Display', cursive
+
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: 16px
+
+body
+    background-color: $Very-light-gray
+
+    .container
+        width: $Mobile - 40px
+        margin: 70px auto 50px
+        .card
+            background-color: $Bright-orange
+            padding: 40px
+            border-radius: 10px 10px 0 0
+            .img
+                padding-bottom: 20px
+            .title
+                font-family: $big
+                color: $Very-light-gray
+                padding: 10px 0
+                font-size: 2.5em
+                text-transform: uppercase
+            .description 
+                font-family: $Lexen
+                line-height: 1.6em
+                color: $Transparent-white
+                padding: 10px 0
+            .btn
+                cursor: pointer
+                margin-top: 10px
+                padding: 10px 20px
+                border: none
+                border-radius: 25px
+                font-family: $Lexen
+                color: $Bright-orange 
+                background-color: $Very-light-gray
+
+            .btn:hover
+                background-color: inherit
+                border: 2px solid $Very-light-gray
+                color: $Very-light-gray
+        .card:nth-child(2)
+            background-color: $Dark-cyan
+            border-radius: 0
+            .btn
+                color: $Dark-cyan
+            .btn:hover
+                color: $Very-light-gray
+        .card:nth-child(3)
+            background-color: $Very-dark-cyan
+            border-radius: 0 0 10px 10px
+            .btn
+                color: $Very-dark-cyan
+            .btn:hover
+                color: $Very-light-gray
+@media (min-width: $Desktop)
+    body
+        .container
+            margin-top: 130px
+            display: flex
+            width: $Desktop  - 60px
+            .card
+                .btn
+                    margin-top: 60px
+            .card:nth-child(1)
+                border-radius: 10px 0 0 10px
+            .card:nth-child(3)
+                border-radius: 0 10px 10px 0
+
+            
